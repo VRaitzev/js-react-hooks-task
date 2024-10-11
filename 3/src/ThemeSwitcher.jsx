@@ -1,11 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ButtonGroup, ToggleButton } from 'react-bootstrap';
 
 import ThemeContext from './contexts';
 
 const ThemeSwitcher = () => {
   // BEGIN (write your solution here)
-
+  const value = useContext(ThemeContext);
+  const {setTheme, themes, theme} = value
   // END
 
   return (

@@ -26,7 +26,17 @@ const themes = [
 
 const ThemeProvider = ({ children }) => {
   // BEGIN (write your solution here)
+  const [theme, setTheme] = useState(themes[0]);
 
+  return <ThemeContext.Provider value={
+    {
+      themes: themes,
+      theme: theme,
+      setTheme : setTheme,
+    }
+  }>
+    {children}
+  </ThemeContext.Provider>
   // END
 };
 

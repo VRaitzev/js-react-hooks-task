@@ -4,7 +4,8 @@ import ThemeContext from './contexts';
 
 const Profile = () => {
   // BEGIN (write your solution here)
-
+  const value = useContext(ThemeContext);
+  const className = value.theme.className
   // END
 
   return (

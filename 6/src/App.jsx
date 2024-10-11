@@ -1,14 +1,14 @@
 import React, { useState, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const Factorial = memo(({ number }) => {
+const Factorial = ({ number }) => {
   const factorialFunc = (number) => {
     if (number <= 0) return 1;
     return number * factorialFunc(number - 1);
   };
   
   return <div>Factorial of {number} is {factorialFunc(number)}</div>;
-});
+};
 
 const App = () => {
   const [value, setValue] = useState(0);
